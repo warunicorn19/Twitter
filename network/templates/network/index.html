@@ -1,0 +1,43 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div class="mt-2" id="post-view-head">
+    </div>
+
+    {% if user.is_authenticated %}
+        <div class="border rounded m-2 p-2" id="compose-post">
+            <h5>New post</h5>
+            <form id="compose-form" method="POST">
+                {% csrf_token %}
+                <textarea class="form-control mr-2 p-2" id="compose-content" placeholder="What's on your mind?"></textarea>
+                <input type="submit" class="btn btn-primary" value="Post">
+            </form>
+        </div>
+    {% endif %}
+
+    <div id="posts-view">
+    </div>
+
+    <div class="container p-4">
+        <div class="pagination justify-content-center">
+            <span class="step-links" id="p-pagination">
+                <a href="#" id="previous">Previous</a>
+                <span class="current" id="current"></span>
+                <a href="#" id="next">Next</a>
+            </span>
+            <span class="step-links" id="u-pagination">
+                <a href="#" id="u-previous">Previous</a>
+                <span class="current" id="u-current"></span>
+                <a href="#" id="u-next">Next</a>
+            </span>
+        </div>
+    </div>
+        
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/index.js' %}"></script>
+{% endblock %}
