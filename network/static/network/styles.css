@@ -1,0 +1,58 @@
+body {
+    background-color: white;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.post-button {
+    background-color: #025959;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.post-nav {
+    background-color: #1DA1F2;
+}
+
+.time-stamp {
+    font-size: 12px;
+    color: grey;
+}
+
+.liked {
+    color: #1DA1F2;
+}
+
+.unliked {
+    color: red;
+}
+
+.no-post {
+    font-size: 24px;
+    color: gray;
+    text-align: center;
+}
+
+#post-view-head {
+    color: #1DA1F2;
+}
+
+.fa {
+    color: red;
+    font-size: 20px;
+    user-select: none;
+}
+
+.btn-primary {
+    margin-top: 20px;
+}
+
+#compose-post{
+    height: 200px;
+}
